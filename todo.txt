@@ -1,1 +1,10 @@
-//log
+//Done
+
+(1)2D Page
+(2)2D Bet history page
+(3)2D Winners page
+(4)2D Holiday Page
+(5)2D Bet page
+
+//Left 
+(6)2D Confirm page

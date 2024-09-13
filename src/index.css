@@ -10,6 +10,12 @@ body{
   color: white;
   overflow-x: hidden !important;
 }
+.bg-main{
+  background: #0F3943;
+}
+.bg-red2{
+  background: #F90402;
+}
 .flag{
   width: 30px;
   height: 30px;
@@ -71,6 +77,11 @@ object-position: center;
 .modal{
   /* margin-top: 20vh !important; */
   --bs-modal-bg: none !important;
+}
+.timeModal .modal-content,.lottoModal .modal-content{
+  color: black !important;
+  background: white !important;
+ 
 }
 .modalCloseBtn{
   background: white;
