@@ -1,5 +1,5 @@
 import prize from '../../assets/img/prize.png'
-const TwoDWinnersPage = () => {
+const ThreeDWinnersPage = () => {
     const winnerLists=[
        {id:1,name:'Shoon Thiri May ',img:'https://new-static-ui.vercel.app/assets/img/profile.png',bet:'30,000',win:'2,400,000'},
        {id:2,name:'Shoon Thiri May ',img:'https://new-static-ui.vercel.app/assets/img/profile.png',bet:'30,000',win:'2,400,000'},
@@ -9,7 +9,7 @@ const TwoDWinnersPage = () => {
    ];
  return (
    <div className='p-2 p-sm-3'>
-           <h5 className="text-center fw-bold mt-3 mb-4 " >2D ကံထူးရှင်များ စာရင်း</h5>
+           <h5 className="text-center fw-bold mt-3 mb-4 " >3D ကံထူးရှင်များ စာရင်း</h5>
            {/* <div style={{background:'#2c355d'}}  className=" p-3 d-flex align-items-center justify-content-between rounded-4">
        <div>
          <h6>Updated at:</h6>  
@@ -36,4 +36,4 @@ const TwoDWinnersPage = () => {
  )
 }
 
-export default TwoDWinnersPage
+export default ThreeDWinnersPage

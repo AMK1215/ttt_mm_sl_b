@@ -33,6 +33,14 @@ const TwoDBetPage = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [selectedNumbers,setSelectedNumbers]=useState([]);
+    const addSelectedNumbers=(num)=>{
+        if(selectedNumbers.includes(num)){
+          return  setSelectedNumbers(selectedNumbers.filter((n)=>n!=num))
+        }else{
+            setSelectedNumbers([...selectedNumbers,num])
+        }
+     }
   return (<>
     <div className='px-2 pt-2 p-sm-3'>
        <TwoDChooseOption/>
@@ -81,11 +89,10 @@ const TwoDBetPage = () => {
 
                         </Modal>
                     </div>
-
-                      <div className="twoDNumbers   py-3 px-2  ">
+                       <div className="twoDNumbers   py-3 px-2  ">
                         <div className="d-flex align-items-center justify-content-between flex-wrap gap-3">
                             {numbers.map((item) => {
-                                return <div className="cursorPointer rounded-3 text-center numberContainer ">
+                                return <div onClick={()=>addSelectedNumbers(item.number)} className={`cursorPointer rounded-3 text-center numberContainer ${selectedNumbers.includes(item.number) ? "bg-red2" : "bg-stone"}`}>
                                     <p className='number'>{item.number}</p>
                                     <div className="bar" >
                                         <div className="activeBar" style={{ width: item.percent + '%', background: getActiveBarColor(item.percent) }}>
@@ -93,7 +100,7 @@ const TwoDBetPage = () => {
                                     </div>
                                 </div>
                             })}{numbers2.map((item) => {
-                                return <div className="cursorPointer rounded-2 text-center numberContainer ">
+                                return <div onClick={()=>addSelectedNumbers(Number(item))} className={`cursorPointer rounded-3 text-center numberContainer ${selectedNumbers.includes(item) ? "bg-red2" : "bg-stone"}`}>
                                     <p className='number'>{item}</p>
                                     <div className="bar" >
                                         <div className="activeBar" style={{ width: '0%', background: '' }}>
