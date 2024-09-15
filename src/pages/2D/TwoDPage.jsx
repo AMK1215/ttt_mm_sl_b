@@ -6,6 +6,8 @@ import list from '../../assets/img/list.png'
 import winner from '../../assets/img/winner.png'
 import holiday from '../../assets/img/holiday.png'
 import '../../assets/css/twoD.css'
+import LottoAppMenu from "../../components/2D/LottoAppMenu";
+import UserWallet from "../../components/2D/UserWallet";
 const TwoDPage = () => {
     const times = [
       // {id: 1, time: '10:30 AM'},
@@ -31,9 +33,11 @@ const TwoDPage = () => {
 
      const navigate = useNavigate();
      return (
-      <div className="py-2 px-2 px-sm-4">
-        {/* <UserWallet user={user} /> */}
-        <div className="lottoHomeContainer p-2 my-4 d-flex align-items-center justify-content-between ">
+      <>
+      <LottoAppMenu/>
+        <div className="py-2 px-2 px-sm-4">
+        <UserWallet/> 
+        <div className="lottoHomeContainer p-2 mt-3 d-flex align-items-center justify-content-between ">
           {lottoHome.map((item) => {
             return (
               <NavLink to={item.link} key={item.id}>
@@ -46,7 +50,7 @@ const TwoDPage = () => {
           })}
         </div>
         <div className="mb-3  mx-3 text-center py-2  ">
-          <h1 className=" text-white fw-bold mb-4">26</h1>
+          <h1 className=" text-white fw-bold my-3">26</h1>
           <div className="d-flex justify-content-center align-items-center gap-1">
             <BiCheckCircle />
             <p >
@@ -135,6 +139,7 @@ const TwoDPage = () => {
           </Modal.Body>
         </Modal>
       </div>
+      </>
     );
   };
 

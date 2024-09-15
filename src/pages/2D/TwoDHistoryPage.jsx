@@ -1,5 +1,6 @@
 import { useState } from "react";
 import calendar from '../../assets/img/calendar.png'
+import LottoAppMenu from "../../components/2D/LottoAppMenu";
 
 const TwoDHistory = () => {
     const [session, setSession] = useState("morning");
@@ -20,7 +21,9 @@ const TwoDHistory = () => {
     }
 
     return (
-      <div className="pt-4 pb-5 container">
+      <>
+      <LottoAppMenu/>
+       <div className="pt-4 pb-5 container">
         {!detail && (
           <>
             <h5 className="text-center fw-bold">2D တစ်နေ့တာ မှတ်တမ်း</h5>
@@ -117,6 +120,7 @@ const TwoDHistory = () => {
         )}
         {/* {detail && <TwoDSlip slip={slip} show={showDetail} />} */}
       </div>
+      </>
     );
   };
 

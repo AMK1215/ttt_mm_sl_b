@@ -8,6 +8,8 @@ import repeat from "../../assets/img/repeat.png";
  import info from '../../assets/img/info.png';
  import info2 from '../../assets/img/info2.png';
 import ThreeDAMyanChoosePage from "../../components/3D/ThreeDAMyanChoose";
+import LottoAppMenu from "../../components/2D/LottoAppMenu";
+import UserWallet from "../../components/2D/UserWallet";
 const ThreeDBetPage = () => {
     const [selectedNumRange,setSelectedNumRange]=useState('000-099');
     const [selectedRangeNumbers,setSelectedRangeNumbers]=useState([]);
@@ -1150,10 +1152,14 @@ const numbers3D=[
   }
   return (
     <>
+    <LottoAppMenu/>
+    <div className="mt-3 px-2">
+    <UserWallet/>
+    </div>
       <div className="p-2 p-sm-3 pb-5">
-         {!quickSelect && (
+          {!quickSelect && (
           <>
-            <div className="mt-2 mb-4 px-3 py-3 d-flex align-items-center justify-content-center gap-3">
+            <div className="  d-flex align-items-center justify-content-center gap-2 gap-sm-4">
               {/* <div className="text-center">
             <img src={maze} style={{ width: "30px", height: "30px" }} />
             <div>
@@ -1164,7 +1170,7 @@ const numbers3D=[
                 <Link onClick={() => setQuickSelect(true)}>
                   <img src={flash} style={{ width: "30px", height: "30px" }} />
                   <div>
-                    <small>အမြန်ရွေး</small>
+                    <small style={{fontSize:'13px'}}>အမြန်ရွေး</small>
                   </div>
                 </Link>
               </div>
@@ -1172,7 +1178,7 @@ const numbers3D=[
               <div className="text-center">
             <img src={repeat} style={{ width: "30px", height: "30px" }} />
             <div>
-              <small>ပတ်လည်</small>
+              <small style={{fontSize:'13px'}}>ပတ်လည်</small>
             </div>
           </div>
           <div className="pt-4">

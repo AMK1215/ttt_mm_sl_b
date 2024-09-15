@@ -37,24 +37,22 @@
     border: 1px solid #fff;
  }
  .tonelonepuNumber{
+   background: #E9E4E4;
    width:60px;
    height: 40px;
    text-align: center;
-   background: #6e7391;
-   color: #000;
-   display: flex;
+    display: flex;
    align-items: center;
    justify-content: center;
-   font-size: 14px;
+   font-size: 15px;
    font-weight: 600;
  }
  .kwat100Number{
    width:100px;
    height: 40px;
    text-align: center;
-   background: #6e7391;
-   color: #000;
-   display: flex;
+   background: #E9E4E4;
+    display: flex;
    align-items: center;
    justify-content: center;
    font-size: 14px;

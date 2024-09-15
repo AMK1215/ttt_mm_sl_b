@@ -4,6 +4,7 @@ import { BiEdit } from "react-icons/bi";
 import dashed from "../../assets/img/dashed.png";
 import { useNavigate } from "react-router-dom";
  import { Modal, Spinner } from "react-bootstrap";
+import LottoAppMenu from "../../components/2D/LottoAppMenu";
  
 
 const ThreeDConfirmPage = () => {
@@ -33,6 +34,7 @@ const ThreeDConfirmPage = () => {
 
   return (
     <>
+    <LottoAppMenu/>
       <div className="p-2 px-sm-3">
         <div
           style={{
@@ -124,12 +126,12 @@ const ThreeDConfirmPage = () => {
         onHide={() => setSmShow(false)}
         aria-labelledby="example-modal-sizes-title-sm"
       >
-        <Modal.Header closeButton className="bg-blue text-white">
+        <Modal.Header closeButton className="bg-white text-black">
           <Modal.Title id="example-modal-sizes-title-sm">
             <small>({num}) ထိုးကြေးပြင်ရန် </small>
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body className="bg-blue text-white">
+        <Modal.Body className="bg-white text-black rounded-bottom">
           <input type="number" 
           className="form-control bg-blue betAmount text-white"
           onChange={e => setBetAmount(e.target.value)}

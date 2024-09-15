@@ -4,8 +4,12 @@ import TwoDChooseOption from '../../components/2D/TwoDChooseOption'
 import info from '../../assets/img/info.png';
 import info2 from '../../assets/img/info2.png';
   import '../../assets/css/chooseNumber.css';
+import LottoAppMenu from '../../components/2D/LottoAppMenu';
+import { useNavigate } from 'react-router-dom';
+import UserWallet from '../../components/2D/UserWallet';
 
 const TwoDBetPage = () => {
+    const navigate= useNavigate()
     const getActiveBarColor = (percent) => {
         return percent === 100 ? '#00CD15' : percent >= 90 ? '#FF0000' : percent > 50 ? '#FF7A00' : percent < 50 && percent > 0 ? '#00CD15' : ''
     }
@@ -42,6 +46,10 @@ const TwoDBetPage = () => {
         }
      }
   return (<>
+  <LottoAppMenu/>
+  <div className="mt-3">
+  <UserWallet/>
+  </div>
     <div className='px-2 pt-2 p-sm-3'>
        <TwoDChooseOption/>
       <div className=" ">
@@ -116,7 +124,7 @@ const TwoDBetPage = () => {
      <div className="betBtns  bg-main ">
        <div className="py-2 mx-auto d-flex gap-2 justify-content-center">
        <button className=" chooseNumDelBtn  py-2 px-4 rounded-3">ဖျက်မည်</button>
-       <button className=" bg-main border text-white py-2 px-4 rounded-3">
+       <button onClick={()=>navigate('/2d/confirm')} className=" bg-main border text-white py-2 px-4 rounded-3">
         <small>ထိုးမည်</small>
        </button>
    </div>

@@ -1,4 +1,5 @@
 import prize from '../../assets/img/prize.png'
+import LottoAppMenu from '../../components/2D/LottoAppMenu';
 const TwoDWinnersPage = () => {
     const winnerLists=[
        {id:1,name:'Shoon Thiri May ',img:'https://new-static-ui.vercel.app/assets/img/profile.png',bet:'30,000',win:'2,400,000'},
@@ -7,7 +8,8 @@ const TwoDWinnersPage = () => {
        {id:4,name:'Shoon Thiri May ',img:'https://new-static-ui.vercel.app/assets/img/profile.png',bet:'30,000',win:'2,400,000'},
        {id:5,name:'Shoon Thiri May ',img:'https://new-static-ui.vercel.app/assets/img/profile.png',bet:'30,000',win:'2,400,000'},
    ];
- return (
+ return (<>
+  <LottoAppMenu/>
    <div className='p-2 p-sm-3'>
            <h5 className="text-center fw-bold mt-3 mb-4 " >2D ကံထူးရှင်များ စာရင်း</h5>
            {/* <div style={{background:'#2c355d'}}  className=" p-3 d-flex align-items-center justify-content-between rounded-4">
@@ -33,6 +35,7 @@ const TwoDWinnersPage = () => {
      </div>
 
    </div>
+   </>
  )
 }
 

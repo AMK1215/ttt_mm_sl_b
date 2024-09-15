@@ -118,7 +118,7 @@ const TwoDChooseOption = ({pathee, frontNumber, backNumber, powerNumber, twentyN
           </Modal.Body>
           <Modal.Footer>
             <Button
-              className="chooseNumDelBtn text-white border-0"
+              className="chooseNumDelBtn text-black border-0"
               onClick={() => setIsOp1Show(false)}
             >
               ဖျက်မည်
