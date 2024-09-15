@@ -3,6 +3,8 @@ import React from 'react'
 import winner from '../../assets/img/winner.png';
 import holiday from '../../assets/img/holiday.png';
 import { Link, NavLink } from 'react-router-dom';
+import LottoAppMenu from '../../components/2D/LottoAppMenu';
+import UserWallet from '../../components/2D/UserWallet';
   
 
 
@@ -14,7 +16,11 @@ const ThreeDPage = () => {
         { id: 3, title: 'ပိတ်ရက်', img: holiday, link: '/3d/holiday' },
     ];
   return (
+    <>
+    <LottoAppMenu/>
     <div className='p-2 p-sm-3'>
+    <UserWallet/>
+
        <div className="lottoHomeContainer p-2 my-4 d-flex align-items-center justify-content-between ">
                     {lottoHome.map((item) => {
                         return <NavLink to={item.link} key={item.id}>
@@ -59,6 +65,8 @@ const ThreeDPage = () => {
                 <Link to={'/3d/bet'}>ထိုးမည်</Link>
         </button>
     </div>
+    </>
+
   )
 }
 

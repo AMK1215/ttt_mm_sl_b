@@ -5,7 +5,9 @@ import fish from "../../assets/img/fish.svg";
 import card from "../../assets/img/card.svg";
 import football from "../../assets/img/sport.svg";
 import "../../assets/css/footer.css";
-import lotto from "../../assets/img/lotto.svg";
+// import lotto from "../../assets/img/lotto.svg";
+import lotto from "../../assets/img/lotto.png";
+import lotto2 from "../../assets/img/3d.png";
 
 import { Link, useSearchParams } from "react-router-dom";
 
@@ -18,7 +20,7 @@ const BottomMenu = () => {
     { img: card, link: "?type=live casino&&list=JILI", value: "live casino" },
     { img: football, link: "?type=sport book&&list=SBO", value: "sport book" },
     { img: lotto, link: "/2d", value: "2d" },
-    { img: lotto, link: "/3d", value: "3d" },
+    { img: lotto2, link: "/3d", value: "3d" },
   ];
   return (
     <div className="bottomMenu">

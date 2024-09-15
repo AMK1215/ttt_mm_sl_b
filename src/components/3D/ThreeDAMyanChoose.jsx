@@ -118,7 +118,7 @@ const ThreeDAMyanChoosePage = ({quickSelect, addNumber, digits}) => {
               return (
                 <div
                   key={index}
-                  className={`rounded-3 tonelonepuNumber cursor-pointer ${
+                  className={`rounded-3 tonelonepuNumber text-danger cursor-pointer ${
                     digits.includes(number) && "bg-pink text-white "
                   }`}
                   onClick={() => addNumber(number)}
@@ -136,7 +136,7 @@ const ThreeDAMyanChoosePage = ({quickSelect, addNumber, digits}) => {
               return (
                 <div
                   key={index}
-                  className={`rounded-3 kwat100Number col-4 me-2 text-center mb-2 p-2 ${
+                  className={`rounded-3 kwat100Number text-danger col-4 me-2 text-center mb-2 p-2 ${
                     kwat.includes(index) ? "bg-pink text-white " : ""
                   }`}
                   onClick={() => [
@@ -152,9 +152,9 @@ const ThreeDAMyanChoosePage = ({quickSelect, addNumber, digits}) => {
         </div>
         <div className="d-flex">
           <p className="me-2">
-            ဂဏန်းအရေအတွက်: 
+            ဂဏန်းအရေအတွက် - 
           </p>
-          <h5 className="fw-bold d-inline">303</h5>
+          <h5 className=" d-inline">0</h5>
         </div>
         <Form className="mt-4 pb-5">
           <small className="fw-semibold">လောင်းကြေးထည့်ပါ။</small>

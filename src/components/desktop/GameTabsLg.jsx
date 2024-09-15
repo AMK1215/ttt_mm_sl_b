@@ -4,6 +4,7 @@ import all from '../../assets/img/all.png'
  import slot from '../../assets/img/slotL.png'
 import casino from '../../assets/img/casinoL.png'
 import sport from '../../assets/img/sportL.png'
+import lotto from '../../assets/img/lottoBg.png'
 import fish from '../../assets/img/fishL.png'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { IoGameController } from 'react-icons/io5'
@@ -89,6 +90,8 @@ const GameTabsLg = () => {
         {img:casino,name:'Casino Gams',value:'live casino'},
         {img:fish,name:'Fishing Games',value:'fishing'},
         {img:sport,name:'Sport Games',value:'sport book'},
+        {img:lotto,name:'2D',value:'2d'},
+        {img:lotto,name:'3D',value:'3d'},
     ]
     const gamesData=[
         {type:'all',
@@ -439,8 +442,10 @@ const GameTabsLg = () => {
         <div className="row mt-4">
             {gameTabs.map((item,index)=>{
                 return <div onClick={()=>{
-                    navigate(`?type=${item.value}&list=JILI`)
-                }} key={index} className="cursor-pointer col-2 px-1">
+                    navigate(item.value==='2d' ? '/2d' : 
+                      item.value==='3d' ? '/3d' 
+                       :`?type=${item.value}&list=JILI`)
+                }} key={index} className="cursor-pointer col-2 px-1 mb-2">
                     <img src={item.img} className='gameTabImgLg rounded-3 ' />
                     <div className='p-2 gameTabTitleLg rounded-bottom-3 text-center' >{item.name}</div>
                 </div>

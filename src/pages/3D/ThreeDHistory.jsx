@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ThreeDHistoryDetail from "../../components/3D/ThreeDHistoryDetail";
+import LottoAppMenu from "../../components/2D/LottoAppMenu";
   
 const ThreeDHistory = () => {
  
@@ -19,7 +20,8 @@ const ThreeDHistory = () => {
     console.log('slip',slip)
   }
 
-  return (
+  return (<>
+    <LottoAppMenu/>
     <div className="pt-4 pb-5 container">
       <h5 className="text-center fw-bold">3Dထီထိုးမှတ်တမ်း</h5>
       {/* <span className="d-block text-center fw-bold mb-4">{today}</span> */}
@@ -40,6 +42,7 @@ const ThreeDHistory = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 
